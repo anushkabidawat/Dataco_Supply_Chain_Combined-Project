@@ -40,21 +40,22 @@ The dataset spans **January 2015 – January 2018**, but order volume drops shar
 The repo includes three Power BI dashboard pages — Executive Summary, Customer & Product Insights, and Supply Chain & Logistics — see the `/images` folder for screenshots.
 
 ## Project Structure
-dataco-supply-chain-analytics/
+```
+Dataco_Supply_Chain_Combined-Project/
 ├── README.md
+├── data/
+│   └── data_source.md
 ├── notebooks/
-│ └── dataco_supply_chain_eda.ipynb
+│   └── dataco_supply_chain_eda.ipynb
 ├── sql/
-│ └── dataco_supply_chain_queries.sql
+│   └── dataco_supply_chain_queries.sql
 ├── excel/
-│ └── dataco_supply_chain_workbook.xlsx
+│   └── dataco_supply_chain_workbook.xlsx
 ├── powerbi/
-│ └── dataco_supply_chain_dashboard.pbix
-├── images/
-│ └── (dashboard screenshots)
-└── data/
-└── data_source.md
-
+│   └── dataco_supply_chain_dashboard.pbix
+└── images/
+    └── (dashboard screenshots)
+```
 ## Tools & Tech Stack
 
 - **Python**: pandas, numpy, matplotlib, seaborn
