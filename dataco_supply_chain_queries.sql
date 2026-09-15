@@ -71,7 +71,7 @@ SELECT
     ROUND(SUM(Sales),2) AS total_sales,
     ROUND(SUM(`Order Profit Per Order`),2) AS total_profit,
     COUNT(DISTINCT `Order Id`) AS total_orders,
-    ROUND(AVG(Sales),2) AS avg_order_value
+    ROUND(SUM(Sales) / COUNT(DISTINCT `Order Id`),2) AS avg_order_value
 FROM dataco_cleaned
 GROUP BY `Customer Segment`
 ORDER BY total_sales DESC;
@@ -207,7 +207,7 @@ SELECT
     SUM(`Order Profit Per Order`) AS total_profit,
     COUNT(DISTINCT `Order Id`) AS total_orders,
     COUNT(DISTINCT `Customer Id`) AS total_customers,
-    AVG(Sales) AS avg_order_value
+    SUM(Sales) / COUNT(DISTINCT `Order Id`) AS avg_order_value
 FROM dataco_cleaned
 )
 SELECT
